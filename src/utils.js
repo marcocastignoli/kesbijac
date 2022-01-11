@@ -14,7 +14,12 @@ export async function addInterface(sandbox, i, options) {
 }
 
 export async function callContract(sandbox) {
-    const contract = await fs.promises.readFile(`contracts/${sandbox.contract}/contract.js`)
+    let contract
+    try {
+        contract = await fs.promises.readFile(`contracts/${sandbox.contract}/contract.js`)
+    } catch(e) {
+        return 'Contract doesn\'t exist'
+    }
     await new Promise(resolve => {
         sandbox.resolve = resolve;
         const code = `
@@ -24,6 +29,8 @@ export async function callContract(sandbox) {
                 let contract = new ${sandbox.contract}()
                 if (contract[fn]) {
                     res = await contract[fn](params)
+                } else {
+                    res = 'function doesn\\\'t exist'
                 }
                 resolve()
             }
