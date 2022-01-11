@@ -4,11 +4,11 @@ class test  {
         return true
     }
     async get({key}) {
-        let a = await call('bank', 'balance')
+        let a = await call('http://localhost:8888', 'bank', 'balance')
         return await state.get(key) + a
     }
     async private({token}) {
-        let username = await call('authentication', 'verify', {
+        let username = await call('http://localhost:8888', 'authentication', 'verify', {
             token
         })
         if (!username) {
