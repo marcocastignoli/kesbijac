@@ -7,6 +7,9 @@ class authentication {
             return 'User doesn\'t exist'
         }
         const validPassword = await crypto.bcryptCompare(password, password2);
+        if (!validPassword) {
+            return 'Password not valid'
+        }
         return auth.jwtSign({ username }, SECRET_KEY);
     }
     async register({ username, password }) {

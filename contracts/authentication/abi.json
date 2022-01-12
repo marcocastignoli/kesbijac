@@ -1,0 +1,40 @@
+[
+    {
+        "fn": "login",
+        "parameters": [
+            {
+                "name": "username",
+                "type": "string",
+                "options": {
+                  "label": "username"
+                }
+            },
+            {
+                "name": "password",
+                "type": "string",
+                "options": {
+                    "label": "password"
+                  }
+            }
+        ]
+    },
+    {
+        "fn": "register",
+        "parameters": [
+            {
+                "name": "username",
+                "type": "string",
+                "options": {
+                  "label": "username"
+                }
+            },
+            {
+                "name": "password",
+                "type": "string",
+                "options": {
+                    "label": "password"
+                  }
+            }
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "fn": "set",
+        "parameters": [
+            {
+                "name": "key",
+                "type": "string",
+                "options": {
+                  "label": "Key"
+                }
+            },
+            {
+                "name": "value",
+                "type": "string",
+                "options": {
+                    "label": "Value"
+                  }
+            }
+        ]
+    },
+    {
+        "fn": "get",
+        "parameters": [
+            {
+                "name": "key",
+                "type": "string",
+                "options": {
+                    "label": "Key"
+                  }
+            }
+        ],
+        "output": [
+            {
+                "name": "res",
+                "type": "string",
+                "label": "Value: "
+            }
+        ]
+    }
+]
