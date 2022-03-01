@@ -16,6 +16,13 @@
                     "label": "password"
                   }
             }
+        ],
+        "output": [
+            {
+                "name": "res",
+                "type": "store",
+                "key": "token"
+            }
         ]
     },
     {

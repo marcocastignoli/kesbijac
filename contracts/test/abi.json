@@ -11,10 +11,11 @@
             },
             {
                 "name": "value",
-                "type": "string",
+                "type": "store",
                 "options": {
+                    "key": "http://localhost:8888:authentication:token",
                     "label": "Value"
-                  }
+                }
             }
         ]
     },
